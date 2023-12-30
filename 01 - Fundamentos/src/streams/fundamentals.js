@@ -1,6 +1,4 @@
-// Streams ->
-
-// process.stdin.pipe(process.stdout);
+// Streams -> process.stdin.pipe(process.stdout);
 
 import { Readable, Writable, Transform } from "node:stream";
 

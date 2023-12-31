@@ -1,32 +1,12 @@
 import http from "node:http";
 import { json } from "./middlewares/json.js";
 
-const users = [];
-
 const server = http.createServer(async (request, response) => {
   const { method, url } = request;
 
   await json(request, response);
 
-  if (method === "GET" && url === "/users") {
-    return response.end(JSON.stringify(users));
-  }
-
-  if (method === "POST" && url === "/users") {
-    const { name, email } = request.body;
-
-    users.push({
-      id: 1,
-      name: name,
-      email: email,
-    });
-
-    return response.writeHead(201).end();
-    // O código 201 é retornado quando um novo recurso é criado
-  }
-
   return response.writeHead(404).end();
-  // O código 404 é retornado quando a rota não é encontrada
 });
 
 server.listen(3333);

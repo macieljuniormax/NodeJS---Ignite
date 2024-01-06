@@ -11,10 +11,15 @@ export const routes = [
     handler: (request, response) => {
       const { search } = request.query;
 
-      const users = database.select("users", {
-        name: search,
-        email: search,
-      });
+      const users = database.select(
+        "users",
+        search
+          ? {
+              name: search,
+              email: search,
+            }
+          : null
+      );
 
       return response.end(JSON.stringify(users));
     },

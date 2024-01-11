@@ -9,3 +9,4 @@ out/
 *.swp
 .vscode/
 .idea/
+database/app.db

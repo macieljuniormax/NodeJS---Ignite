@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
-    "lint": "eslint src --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "knex": "node --import tsx ./node_modules/.bin/knex"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "fastify": "^4.25.2"
+    "fastify": "^4.25.2",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   }
 }

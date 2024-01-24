@@ -1,15 +1,18 @@
+# Depenencies
 /.DS_Store
 node_modules/
 package-lock.json
-dist/
-out/
-*.log
-*.tmp
-*.tmp.*
-*.swp
+
+# Code Editorr
 .vscode/
 .idea/
-database/app.db
-database/test.db
+
+# Database
+database/*.db
+
+# Environment
 .env
 .env.test
+
+# build
+build
